@@ -435,8 +435,8 @@ function fxnRunAsUser()
                 ;;
 
             'Debian' )
-                # Log in interactively with no password as new user
-                login -p -f  "${USER_NAME}"
+                # Start the shell as a login shell with an env similar to a real login
+                runuser -l "${USER_NAME}"
                 ;;
 
             * )
